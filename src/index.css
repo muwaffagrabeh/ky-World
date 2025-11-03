@@ -1,0 +1,74 @@
+/* path: src/index.css */
+@import "tailwindcss";
+
+/* ألوان/توكنات */
+:root {
+  --color-brand: #17b8c4;
+}
+
+/* أدوات داكنة موحّدة */
+.text-brand {
+  color: var(--color-brand);
+}
+.muted {
+  @apply text-neutral-400;
+}
+
+.panel {
+  @apply bg-neutral-950 border border-neutral-800 rounded-xl text-white;
+}
+.input-dark {
+  @apply w-full rounded-lg bg-neutral-900 border border-neutral-700 text-white placeholder-neutral-500 p-2;
+}
+.btn-dark {
+  @apply inline-flex items-center justify-center rounded-lg bg-white text-black px-3 py-2 hover:bg-neutral-200;
+}
+.btn-ghost {
+  @apply inline-flex items-center justify-center rounded-lg border border-neutral-700 text-white px-3 py-2 hover:bg-neutral-900;
+}
+
+.table-dark thead tr {
+  @apply bg-neutral-950;
+}
+.table-dark th {
+  @apply text-neutral-300 font-medium;
+}
+.table-dark td {
+  @apply text-neutral-200;
+}
+.table-dark tr {
+  @apply border-b border-neutral-900;
+}
+
+.chip {
+  @apply px-2 py-0.5 rounded-full text-xs border;
+}
+.chip-green {
+  @apply bg-emerald-900/20 text-emerald-300 border-emerald-700;
+}
+.chip-yellow {
+  @apply bg-yellow-900/20 text-yellow-300 border-yellow-700;
+}
+.chip-red {
+  @apply bg-red-900/20 text-red-300 border-red-700;
+}
+.chip-gray {
+  @apply bg-neutral-900 text-neutral-300 border-neutral-700;
+}
+
+/* سبلاش */
+.splash-wrap {
+  @apply min-h-screen grid place-items-center bg-black;
+}
+.splash-logo {
+  @apply h-32 w-auto mb-4;
+}
+.fade-in {
+  animation: fadein 0.6s ease forwards;
+  opacity: 0;
+}
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
