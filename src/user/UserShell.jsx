@@ -8,7 +8,7 @@ export default function UserShell() {
   const loc = useLocation();
 
   useEffect(() => {
-    if (!isUserAuthed() && !loc.pathname.startsWith("/u/login")) {
+    if (!isUserAuthed() && !/^\/u\/login(\/)?$/.test(loc.pathname)) {
       nav("/u/login", { replace: true });
     }
   }, [loc, nav]);
@@ -57,7 +57,7 @@ export default function UserShell() {
           </div>
           <button
             onClick={() => {
-              logoutAll();
+              logoutUser();
               nav("/u/login", { replace: true });
             }}
             className="px-3 py-2 rounded-lg text-sm border border-neutral-700"
